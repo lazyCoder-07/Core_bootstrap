@@ -1,0 +1,111 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="row ">
+    <div class="col-12 grid-margin">
+      <div class="card mt-3">
+        <div class="card-body">
+          <h4 class="card-title">Trainers</h4>
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" class="form-control" style="color:white;">
+          <div class="table-responsive">
+            <table class="table" id="myTable">
+              <thead>
+                <tr>
+                  <th> Trainer Name </th>
+                  <th> Employee ID </th>
+                  <th> Salary </th>
+                  <th> Department </th>
+                  <th> Joining Date </th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr>
+                  <td>
+                    <a href="{% url 'MANViewTrainerprofile' %}" style="text-decoration: none;color: gray"><span class="ps-2">Henry Klein</span></a>
+                  </td>
+                  <td> 02312 </td>
+                  <td> $14,500 </td>
+                  <td> Dashboard </td>
+                  <td> 04 Dec 2019 </td>
+                </tr>
+                
+                <tr>
+                  <td>
+                    <span class="ps-2">Estella Bryan</span>
+                  </td>
+                  <td> 02312 </td>
+                  <td> $14,500 </td>
+                  <td> Website </td>
+                  <td> 04 Dec 2019 </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="ps-2">Lucy Abbott</span>
+                  </td>
+                  <td> 02312 </td>
+                  <td> $14,500 </td>
+                  <td> App design </td>
+                  <td> 04 Dec 2019 </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="ps-2">Peter Gill</span>
+                  </td>
+                  <td> 02312 </td>
+                  <td> $14,500 </td>
+                  <td> Development </td>
+                  <td> 04 Dec 2019 </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="ps-2">Sallie Reyes</span>
+                  </td>
+                  <td> 02312 </td>
+                  <td> $14,500 </td>
+                  <td> Website </td>
+                  <td> 04 Dec 2019 </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[3];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+
+
+{% endblock %}

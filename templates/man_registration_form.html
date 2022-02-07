@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Registration</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        input[type=text],
+        input[type=file] {
+            background: none;
+            border:1px solid #636d87;
+        }
+
+        #c1 {
+            width: 560px;
+            height: 1600px;
+            margin-left: 8% auto;
+            background-color: #2A3038;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        form {
+            position: absolute;
+            width: 90%;
+        }
+
+        #form1 {
+            left: 30px;
+        }
+
+        #form2,
+        #form3,
+        #form4 {
+            left: 600px;
+        }
+
+        label {
+            color: #636d87; 
+        }
+        #label{
+            color: white;
+            font-size: 28px;
+            font-weight: 900px;
+        }
+        #label1{
+            color: white;
+            font-size: 20px;
+            font-weight: 900px;
+        }
+
+        .btn {
+            border:1px solid #636d87;
+            color: #636d87;
+        }
+        .btn:hover{
+            border:1px solid #636d87;
+            color: #636d87;  
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <h2 style="color: white;text-align: center;">Registration Form</h2>
+    <br>
+    
+    <div class="container" id="c1">
+        <br>
+
+        <form id="form1" autocomplete="off">
+            <label id="label">Basic Info</label><br><br>
+            <label>Full Name </label>
+            <input type="text" class="form-control" name="fullname" required>
+            <label>Father's Name </label>
+            <input type="text" class="form-control" name="fathername" required>
+            <label>Mother's Name </label>
+            <input type="text" class="form-control" name="mothername" required><br>
+            <label id="label1">Present Address</label><br>
+            <label>Address 1 </label>
+            <input type="text" class="form-control" name="address1" required>
+            <label>Address 2 </label>
+            <input type="text" class="form-control" name="address2" required>
+            <label>Address 3</label>
+            <input type="text" class="form-control" name="address3" required>
+            <label>Pincode </label>
+            <input type="text" class="form-control" name="pincode" required>
+            <label>District </label>
+            <input type="text" class="form-control" name="district" required>
+            <label>State </label>
+            <input type="text" class="form-control" name="state" required><br>
+            <label id="label1">Permanent Address&nbsp;&nbsp;&nbsp;<span style="font-size: 14px;">(Same as Above
+                    : <input type="checkbox"> )</span></label><br>
+            <label>Address 1 </label>
+            <input type="text" class="form-control" name="paddress1" required>
+            <label>Address 2 </label>
+            <input type="text" class="form-control" name="paddress2" required>
+            <label>Address 3</label>
+            <input type="text" class="form-control" name="paddress3" required>
+            <label>Pincode </label>
+            <input type="text" class="form-control" name="ppincode" required>
+            <label>District </label>
+            <input type="text" class="form-control" name="pdistrict" required>
+            <label>State </label>
+            <input type="text" class="form-control" name="pstate" required>
+            <label>Mobile </label>
+            <input type="text" class="form-control" name="mobile" required>
+            <label>Alternative </label>
+            <input type="text" class="form-control" name="alternative" required>
+            <label>Email </label>
+            <input type="text" class="form-control" name="email" required><br><br>
+            <button type="button" style="float: right;" class="btn " onclick="fun1()" id="btn1">Next</button>
+
+        </form>
+
+
+
+        <form id="form2" autocomplete="off">
+            <label id="label">Educational Qualification</label><br><br>
+            <label id="label1">Plus Two</label><br>
+            <input type="radio" name="plus2">&nbsp;&nbsp;<label>HSE</label>&nbsp;&nbsp;
+            <input type="radio" name="plus2">&nbsp;&nbsp;<label>VHSE</label>&nbsp;&nbsp;
+            <input type="radio" name="plus2">&nbsp;&nbsp;<label>STATE</label>&nbsp;&nbsp;
+            <input type="radio" name="plus2">&nbsp;&nbsp;<label>CENTRAL</label><br>
+            <label >School </label>
+            <input type="text" class="form-control" name="school" required>
+            <label>Aggregate </label>
+            <input type="text" class="form-control" name="aggregate" required>
+            <label>Cerficate Upload</label>
+            <input type="file" class="form-control" name="cupload" required><br>
+            <label id="label1">UG</label><br>
+            <label>Degree </label>
+            <input type="text" class="form-control" name="degree" required>
+            <label>Stream </label>
+            <input type="text" class="form-control" name="stream" required>
+            <label>Passout Year </label>
+            <input type="text" class="form-control" name="passoutyear" required>
+            <label>Aggregate </label>
+            <input type="text" class="form-control" name="aggregate1" required>
+            <label>Backlogs if any: &nbsp;&nbsp;&nbsp;<span style="font-size: 14px;">&nbsp;&nbsp;<input type="radio"
+                        name="supply">
+                    <label>Yes</label>&nbsp;&nbsp;<input type="radio"
+                        name="supply">&nbsp;&nbsp;<label>No</label></span></label><br>
+            <label>Cerficate Upload</label>
+            <input type="file" class="form-control" name="cupload1" required><br>
+            <label id="label1">PG </label><br>
+            <input type="text" class="form-control" name="pg" required><br><br>
+            <button type="button" style="float: right;" class="btn" onclick="fun2()" id="btn1">Next</button>
+            <button type="button" style="float: left;" class="btn " onclick="bfun1()" id="bbtn1">Back</button>
+
+        </form>
+
+        <form id="form3" autocomplete="off">
+            <label id="label">Extra Curricurlar Activities</label><br>
+            <label id="label1">Internship</label><br>
+            <label>Details </label><br>
+            <input type="text" class="form-control" name="details" required>
+            <label>Duration </label>
+            <input type="text" class="form-control" name="duration" required>
+            <label>Certificate </label>
+            <input type="text" class="form-control" name="certificate" required><br>
+            <label id="label1">Online Training</label><br>
+            <label>Details </label>
+            <input type="text" class="form-control" name="details1" required>
+            <label>Duration </label>
+            <input type="text" class="form-control" name="duration1" required>
+            <label>Certificate </label>
+            <input type="text" class="form-control" name="certificate1" required><br>
+            <label id="label1">Project Details</label><br>
+            <label>Title </label>
+            <input type="text" class="form-control" name="title" required>
+            <label>Duration </label>
+            <input type="text" class="form-control" name="duration2" required>
+            <label>Description </label>
+            <input type="text" class="form-control" name="description" required>
+            <label>URL </label>
+            <input type="text" class="form-control" name="url" required><br>
+            <label id="label1">Skills</label><br>
+            <input type="text" class="form-control" name="skill1" required><br>
+            <input type="text" class="form-control" name="skill2" required><br>
+            <input type="text" class="form-control" name="skill3" required><br><br>
+
+            <button type="button" style="float: right;" class="btn " onclick="fun3()" id="btn1">Next</button>
+            <button type="button" style="float: left;" class="btn " onclick="bfun2()" id="bbtn1">Back</button>
+
+        </form>
+ 
+        <form id="form4" autocomplete="off">
+            <label id="label">Upload Photo & ID Proof</label><br>
+            <label>ID Proof</label>
+            <input type="file" class="form-control" name="idproof" required>
+            <label>Photo</label>
+            <input type="file" class="form-control" name="photo" required><br>
+            <br>
+            <button type="submit" style="float: right;" class="btn " onclick="fun()" id="btn1">Submit</button>
+            <button type="button" style="float: left;" class="btn " onclick="bfun3()" id="bbtn1">Back</button>
+
+        </form>
+    </div>
+    <script>
+        var form1 = document.getElementById("form1");
+        var form2 = document.getElementById("form2");
+        var form3 = document.getElementById("form3");
+        var form4 = document.getElementById("form4");
+        var c1 = document.getElementById("c1");
+
+
+        function fun1() {
+            form1.style.left = "600px";
+            form2.style.left = "30px";
+            form3.style.left = "600px";
+            form4.style.left = "600px";
+            c1.style.height = '1050px';
+
+        }
+        function bfun1() {
+            form1.style.left = "30px";
+            form2.style.left = "600px";
+            form3.style.left = "600px";
+            form4.style.left = "600px";
+            c1.style.height = '1600px';
+
+        }
+        function fun2() {
+            form1.style.left = "600px";
+            form2.style.left = "600px";
+            form3.style.left = "30px";
+            form4.style.left = "600px";
+            c1.style.height = "1280px";
+
+        }
+        function bfun2() {
+            form1.style.left = "600px";
+            form2.style.left = "30px";
+            form3.style.left = "600px";
+            form4.style.left = "600px";
+            c1.style.height = '1050px';
+
+        }
+        function fun3() {
+            form1.style.left = "600px";
+            form2.style.left = "600px";
+            form3.style.left = "600px";
+            form4.style.left = "30px";
+            c1.style.height = "350px";
+
+
+        }
+        function bfun3() {
+            form1.style.left = "600px";
+            form2.style.left = "600px";
+            form3.style.left = "30px";
+            form4.style.left = "600px";
+            c1.style.height = '1280px';
+
+        }
+
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

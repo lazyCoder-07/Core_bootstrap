@@ -1,0 +1,100 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="row ">
+    <div class="col-12 grid-margin">
+      <div class="card mt-3">
+        <div class="card-body">
+          <h4 class="card-title">Previous Trainees of Henry Klein</h4>
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" class="form-control" style="color:white;">
+          <div class="table-responsive">
+            <table class="table" id="myTable">
+              <thead>
+                <tr>
+                  <th> Trainee Name </th>
+                  <th> Employee ID </th>
+                  <th> Department </th>
+                  <th> Joining Date </th>
+                  <th> End Date </th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr>
+                  <td>
+                    <span class="ps-2">Henry Klein</span>
+                  </td>
+                  <td> 02312 </td>
+                  <td> Dashboard </td>
+                  <td> 04 Dec 2019 </td>
+                  <td> 04 Dec 2020 </td>
+                </tr>
+                
+                <tr>
+                  <td>
+                    <span class="ps-2">Estella Bryan</span>
+                  </td>
+                  <td> 02312 </td>
+                  <td> Website </td>
+                  <td> 04 Dec 2019 </td>
+                  <td> 04 Dec 2020 </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="{% url 'ManViewPrevioustraineeprofile' %}" style="text-decoration: none" class="text-muted"><span class="ps-2">Lucy Abbott</span></a>
+                  </td>
+                  <td> 02312 </td>
+                  <td> App design </td>
+                  <td> 04 Dec 2019 </td>
+                  <td> 04 Dec 2020 </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="ps-2">Peter Gill</span>
+                  </td>
+                  <td> 02312 </td>
+                  <td> Development </td>
+                  <td> 04 Dec 2019 </td>
+                  <td> 04 Dec 2020 </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="ps-2">Sallie Reyes</span>
+                  </td>
+                  <td> 02312 </td>
+                  <td> Website </td>
+                  <td> 04 Dec 2019 </td>
+                  <td> 04 Dec 2020 </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+
+
+{% endblock %}
