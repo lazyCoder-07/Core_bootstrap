@@ -1,9 +1,24 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block content %}
+<style>
+  .content-wrapper{
+    padding-top: 8%;
+  }
+  @media only screen and (max-width: 1300px){
+    .content-wrapper{
+   
+    padding-top: 7rem;
+  }
+  }
+  @media only screen and (max-width: 600px){
+    .mb{
+   font-size: 17px;
+  }
+  }
+</style>
 
-
-
+<div class="content-wrapper">
 <div class="row">
     <div class="col-md-4 grid-margin stretch-card">
       <div class="card">
@@ -172,7 +187,7 @@
             <div class="col-8 col-sm-12 col-xl-8 my-auto">
               <div class="d-flex d-sm-block d-md-flex align-items-center">
                 <a href="{% url 'invo_projects' %}" style="text-decoration: none; color: #f8f9fa;"> 
-                  <h2 class="mb-0">Involved Projects</h2>
+                  <h2 class="mb">Involved Projects</h2>
                 </a>
               
                 <!-- <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p> -->
@@ -194,7 +209,7 @@
             <div class="col-8 col-sm-12 col-xl-8 my-auto">
               <div class="d-flex d-sm-block d-md-flex align-items-center">
                 <a href="{% url 'dev_attendance' %}" style="text-decoration: none; color: #f8f9fa;">
-                  <h2 class="mb-0">Attendance</h2>
+                  <h2 class="mb">Attendance</h2>
               </a>
                 <!-- <p class="text-success ms-2 mb-0 font-weight-medium">+8.3%</p> -->
               </div>

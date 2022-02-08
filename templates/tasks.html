@@ -1,6 +1,14 @@
-{% extends 'index.html' %}
+  {% extends 'index.html' %}
 {% block content %}
   {% load static %}
+  <style>
+  #a
+  {
+    font-size: 100%;
+  }
+      
+
+  </style>
 <div class="row ">
               <div class="col-12 grid-margin">
          <h2>  <small class="text-muted">Tasks </small>
@@ -11,14 +19,13 @@
       <div class="card">
           <a href="givetask" style="cursor: pointer;text-decoration: none;color: inherit;">
         <div class="card-body">
-          <h5></h5>
+    
           <div class="row">
             <div class="col-8 col-sm-12 col-xl-8 my-auto">
               <div class="d-flex d-sm-block d-md-flex align-items-center">
-                <h2 class="mb-0">Give tasks</h2>
-                <p class="text-success ms-2 mb-0 font-weight-medium"></p>
+                <h6 class="mb-0" id="a">Give tasks</h6>
               </div>
-              <h6 class="text-muted font-weight-normal"></h6>
+         
             </div>
             <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
               <i class="icon-lg mdi mdi-codepen text-primary ms-auto"></i>
@@ -33,14 +40,14 @@
       <div class="card">
           <a href="currenttasks" style="cursor: pointer;text-decoration: none;color: inherit;">
         <div class="card-body">
-          <h5></h5>
+          
           <div class="row">
             <div class="col-8 col-sm-12 col-xl-8 my-auto">
               <div class="d-flex d-sm-block d-md-flex align-items-center">
-                <h2 class="mb-0">Current Tasks</h2>
-                <p class="text-success ms-2 mb-0 font-weight-medium"></p>
+                <h3 class="mb-0" id="a">Current Tasks</h3>
+         
               </div>
-              <h6 class="text-muted font-weight-normal"></h6>
+           
             </div>
             <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
               <i class="icon-lg mdi mdi-wallet-travel text-danger ms-auto"></i>
@@ -54,14 +61,14 @@
       <div class="card">
                 <a href="previoustasks" style="cursor: pointer;text-decoration: none;color: inherit;">
         <div class="card-body">
-          <h5></h5>
+        
           <div class="row">
             <div class="col-8 col-sm-12 col-xl-8 my-auto">
               <div class="d-flex d-sm-block d-md-flex align-items-center">
-                <h2 class="mb-0">Previous tasks</h2>
-                <p class="text-danger ms-2 mb-0 font-weight-medium"></p>
+                <h2 class="mb-0" id="a">Previous tasks</h2>
+              
               </div>
-              <h6 class="text-muted font-weight-normal"></h6>
+           
             </div>
             <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
               <i class="icon-lg mdi mdi-monitor text-success ms-auto"></i>

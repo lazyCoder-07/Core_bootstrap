@@ -11,8 +11,7 @@ urlpatterns = [
     re_path(r'^topictable$', views.topictable,name='topictable'),
     re_path(r'^completedtasktable$', views.completedtasktable,name='completedtasktable'),
     re_path(r'^trainingprofile$', views.trainingprofile,name='trainingprofile'),
-    re_path(r'^attendance$', views.attendance,name='attendance'),
-    
+    re_path(r'^traineestable$', views.traineestable,name='traineestable'),
 
     re_path(r'^man_projects$', views.man_projects, name='man_projects'),
     re_path(r'^man_proj_list$', views.man_proj_list, name='man_proj_list'),

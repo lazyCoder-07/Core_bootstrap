@@ -10,8 +10,8 @@
 #tble{
   margin-bottom: 5px;
   color: #6c7293; 
-   /* width: 65%; 
-  margin-top: 25px; */
+  /* width: 65%; 
+  margin-top: 25px;*/
   /* margin-left: 25%;  */
   width: 100%;
   display: none;
@@ -20,20 +20,26 @@
 </style>
 <body>
   
-  <div class="container">
-    <div class="card" style="margin-top: 20px;">
-      <h2 style="margin-left: 20px;padding-top: 2rem;">ATTENDANCE</h2>
+
+    <!-- <div class="content-wrapper"> -->
+  <!-- <div><label id="head">ATTENDANCE</label></div> -->
+  <!-- <h3 style="margin-left: 20px;">ATTENDANCE</h3> -->
+  <!-- <div class="container"> -->
+    
+  
+    <div class="card">
       
         <div class="card-body">
+          <h3 style="margin-bottom: 20px;">ATTENDANCE</h3>
          <form class="form-inline">
             <div class="">
                  <!-- <label>SELECT FROM DATE</label>  -->
-                 <label class="sr-only" for="inlineFormInputName2">SELECT FROM</label>
-                 <input type="date" class="form-control mb-2 mr-sm-2" id="txtFrom">
+                 <label class="sr-only" for="inlineFormInputName2">From</label>
+                 <input type="text" class="form-control mb-2 mr-sm-2" id="txtFrom">
                 
             <div class="">
-              <label class="sr-only" for="inlineFormInputName2">SELECT TO</label>
-              <input type="date" class="form-control mb-2 mr-sm-2" id="txtTo">
+              <label class="sr-only" for="inlineFormInputName2">To</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="txtTo">
              
             </div>
             <!-- <button id="btnSearch" type="button" class="btn btn-danger Search"  >Search</button> -->
@@ -55,28 +61,23 @@
                           <th>STATUS</th>
                           <th>LOGIN TIME</th>
                           <th>LOGOUT TIME</th>
+                          <th>PERIOD</th>
                         </tr>
                       </thead>                    
                       <tbody>
                         <tr>
-                          <td>05/02/2022</td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
+                          <td>07/02/2022</td>
+                          <td>Present</td>
                           <td>10.00 am</td>
-                          <td>05.00 9m</td>
+                          <td>12.30 am</td>
+                          <td>Half Day</td>
                         </tr>
                         <tr>
-                          <td>06/02/2022</td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
+                          <td>08/02/2022</td>
+                          <td>Present</td>
                           <td>10.00 am</td>
-                          <td>05.00 9m</td>
+                          <td>5.00 pm</td>
+                          <td>Full Day</td>
                         </tr>
                       </tbody>
                     </table>
@@ -106,7 +107,7 @@
         const deptId = $("txtFrom").val();
         const desgId = $("txtTo").val();
         $.ajax({
-          url: 'TLattendance',
+          url: '\app\man_TLattendance',
           data: {
             'dept_id': deptId,
             'desig_id': desgId
@@ -142,14 +143,10 @@
   });
   $(function () {
     $("#txtTo").datepicker({
-      maxDate: new Date(2022, 3 - 1, 1)
+       maxDate: new Date(2022, 3 - 1, 1)
     });
   });
 </script>
+
     </body>
 {% endblock %}
-
-
-
-
-

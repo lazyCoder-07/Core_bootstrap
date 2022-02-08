@@ -1,9 +1,16 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block content %}
-
-<div class="content-wrapper">
-    <div class="row">
+<style>
+  @media(max-width:61.938em){
+    .row h3{
+      font-size: 19px;
+    }
+  }
+</style>
+  
+<!-- <div class="content-wrapper"> -->
+    <!-- <div class="row">
       <div class="col-12 grid-margin stretch-card">
         <div class="card corona-gradient-card">
           <div class="card-body py-0 px-0 px-sm-3">
@@ -12,7 +19,8 @@
         </div>
       </div>
     </div>
-  </div> 
+  </div>  -->
+  
 <!-- <div class="row">
               <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
                 <div class="card">
@@ -98,6 +106,7 @@
 
             <div class="row" style="margin-bottom: 30px;">
                 <h3 class="text-muted">Python</h3></div>
+
                 <div class="row"> 
               <div class="col-sm-4 grid-margin">
                 <div class="card">
@@ -108,7 +117,7 @@
                       <div class="col-8 col-sm-12 col-xl-8 my-auto">
                         <div class="d-flex d-sm-block d-md-flex align-items-center">
                           
-                          <h2 class="mb-0">Project Manager</h2>
+                          <h3 class="mb-0">Project Manager</h3>
                           <!-- <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p> -->
                         </div>
                         <!-- <h6 class="text-muted font-weight-normal">11.38% Since last month</h6> -->
@@ -123,13 +132,12 @@
               </div>
               <div class="col-sm-4 grid-margin">
                 <div class="card">
-                  <a href="/app/man_HRlist" style="text-decoration: none; color: #f8f9fa;">
                   <div class="card-body">
                     <!-- <h5>Sales</h5> -->
                     <div class="row">
                       <div class="col-8 col-sm-12 col-xl-8 my-auto">
                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">HR</h2>
+                          <h3 class="mb-0">HR</h3>
                           <!-- <p class="text-success ms-2 mb-0 font-weight-medium">+8.3%</p> -->
                         </div>
                         <!-- <h6 class="text-muted font-weight-normal"> 9.61% Since last month</h6> -->
@@ -139,18 +147,16 @@
                       </div>
                     </div>
                   </div>
-                </a>
                 </div>
               </div>
               <div class="col-sm-4 grid-margin">
                 <div class="card">
-                  <a href="/app/MANViewTrainers" style="text-decoration: none; color: #f8f9fa;">
                   <div class="card-body">
                     <!-- <h5>Purchase</h5> -->
                     <div class="row">
                       <div class="col-8 col-sm-12 col-xl-8 my-auto">
                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">Trainers</h2>
+                          <h3 class="mb-0">Trainers</h3>
                           <!-- <p class="text-danger ms-2 mb-0 font-weight-medium">-2.1% </p> -->
                         </div>
                         <!-- <h6 class="text-muted font-weight-normal">2.27% Since last month</h6> -->
@@ -161,20 +167,18 @@
                     </div>
                   </div>
                 </div>
-              </a>
               </div>
             </div>
             <!--second row-->
             <div class="row"> 
                 <div class="col-sm-6 grid-margin">
                   <div class="card">
-                    <a href="/app/man_TLlist" style="text-decoration: none; color: #f8f9fa;">
                     <div class="card-body">
                       <!-- <h5>Revenue</h5> -->
                       <div class="row">
                         <div class="col-8 col-sm-12 col-xl-8 my-auto">
                           <div class="d-flex d-sm-block d-md-flex align-items-center">
-                            <h2 class="mb-0">Team Leaders</h2>
+                            <h3 class="mb-0">Team Leaders</h3>
                             <!-- <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p> -->
                           </div>
                           <!-- <h6 class="text-muted font-weight-normal">11.38% Since last month</h6> -->
@@ -184,18 +188,16 @@
                         </div>
                       </div>
                     </div>
-                  </a>
                   </div>
                 </div>
                 <div class="col-sm-6 grid-margin">
                   <div class="card">
-                    <a href="/app/details" style="text-decoration: none; color: #f8f9fa;">
                     <div class="card-body">
                       <!-- <h5>Sales</h5> -->
                       <div class="row">
                         <div class="col-8 col-sm-12 col-xl-8 my-auto">
                           <div class="d-flex d-sm-block d-md-flex align-items-center">
-                            <h2 class="mb-0">Developers</h2>
+                            <h3 class="mb-0">Developers</h3>
                             <!-- <p class="text-success ms-2 mb-0 font-weight-medium">+8.3%</p> -->
                           </div>
                           <!-- <h6 class="text-muted font-weight-normal"> 9.61% Since last month</h6> -->
@@ -205,7 +207,6 @@
                         </div>
                       </div>
                     </div>
-                  </a>
                   </div>
                 </div>
                 <!-- <div class="col-sm-4 grid-margin">

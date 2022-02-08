@@ -34,20 +34,25 @@
 </style>
 <body>
   
-  <div class="container">
-    <div class="card" style="margin-top: 20px;">
-      <h2 style="margin-left: 20px;padding-top: 2rem;">ATTENDANCE</h2>
-      
+
+    <!-- <div class="content-wrapper"> -->
+  <!-- <div><label id="head">ATTENDANCE</label></div> -->
+ 
+  <!-- <div class="container"> -->
+    
+  
+    <div class="card">
+      <h3 class="card-title" style="margin-left: 20px; margin-top: 30px;">Attendance</h3>
         <div class="card-body">
          <form class="form-inline">
             <div class="">
                  <!-- <label>SELECT FROM DATE</label>  -->
-                 <label class="sr-only" for="inlineFormInputName2">SELECT FROM</label>
-                 <input type="date" class="form-control mb-2 mr-sm-2" id="txtFrom">
+                 <label class="sr-only" for="inlineFormInputName2">From</label>
+                 <input type="text" class="form-control mb-2 mr-sm-2" id="txtFrom">
                 
             <div class="">
-              <label class="sr-only" for="inlineFormInputName2">SELECT TO</label>
-              <input type="date" class="form-control mb-2 mr-sm-2" id="txtTo">
+              <label class="sr-only" for="inlineFormInputName2">To</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="txtTo">
              
             </div>
             <!-- <button id="btnSearch" type="button" class="btn btn-danger Search"  >Search</button> -->
@@ -69,28 +74,17 @@
                           <th>STATUS</th>
                           <th>LOGIN TIME</th>
                           <th>LOGOUT TIME</th>
+                          <th>PERIOD</th>
                         </tr>
                       </thead>                    
                       <tbody>
                         <tr>
                           <td>05/02/2022</td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>10.00 am</td>
-                          <td>05.00 9m</td>
-                        </tr>
-                        <tr>
-                          <td>06/02/2022</td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>10.00 am</td>
-                          <td>05.00 9m</td>
+                          <td>Present</td>
+                         
+                          <td>10 am</td>
+                          <td>10.30 am</td>
+                          <TD>Half Day</TD>
                         </tr>
                       </tbody>
                     </table>
@@ -156,10 +150,9 @@
   });
   $(function () {
     $("#txtTo").datepicker({
-      maxDate: new Date(2022, 3 - 1, 1)
+      maxDate: new Date(2022, 2 - 1, 5)
     });
   });
 </script>
- 
     </body>
 {% endblock %}

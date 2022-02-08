@@ -1,17 +1,39 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block content %}
-
+<style>
+  .content-wrapper{
+   
+    padding-left: 5%;
+    padding-right: 4%;
+  }
+  @media only screen and (max-width: 1300px){
+    .content-wrapper{
+    padding-left: 5%;
+    padding-right: 3%;
+    padding-top: 4rem;
+  }
+  }
+  .row{
+    margin-top: 10%;
+  }
+  .card{
+  width: 62rem;
+}
+@media only screen and (max-width: 1300px){
+  .card{
+    width: auto;
+  }
+}
+</style>
 
 <div class="content-wrapper">
- 
 <div class="row ">
     <div class="col-12 grid-margin">
       <div class="card">
-        <h3 style="margin-left: 10px;padding-top: 20px;">Involved Projects</h3>
         <div class="card-body">
-         
-          <input id="myInput" type="text" placeholder="Search.." style="width: 100%;background-color: #191c24;color: white;">
+          <h3>Involved Projects</h3>  
+          <input id="myInput" type="text" placeholder="Search for names.." class="form-control text-white">
           <br>
 
           <div class="table-responsive">

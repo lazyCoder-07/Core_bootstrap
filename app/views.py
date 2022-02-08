@@ -7,9 +7,6 @@ def index(request):
 
 def profiledash(request):
     return render(request,'profiledash.html')
-def attendance(request):
-    return render(request,'attendance.html')
-
 
 def Training(request):
     return render(request,'Training.html')
@@ -23,7 +20,9 @@ def topictable(request):
 def completedtasktable(request):
     return render(request,'completedtasktable.html')
 def trainingprofile(request):
-    return render(request,'trainingprofile.html') 
+    return render(request,'trainingprofile.html')
+def traineestable(request):
+    return render(request,'traineestable.html')      
 
 
 def man_projects(request):

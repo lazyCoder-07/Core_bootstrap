@@ -17,14 +17,14 @@
     </script>
   </head>
   <body>
-    <div class="content-wrapper">    
+    {% comment %} <div class="content-wrapper">     {% endcomment %}
       <div class="row">   
         <div class="col-12 grid-margin">
           <div class="card">
             <div class="card-body">
               <h3 class="card-title">Project Managers</h3>
               <div class="form-group">
-                <input type="text" class="form-control"id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;">
+                <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;">
                  </div>
                  <div class="table-responsive">
                   <table class="table" id="myTable">
@@ -67,7 +67,7 @@
           </div>
         </div>
       </div>
-    </div>
+    {% comment %} </div> {% endcomment %}
   </body>
 </html>
 
